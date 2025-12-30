@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Hero from './components/hero/Hero';
 import Imagine from './components/imagine/Imagine';
 import Gallery from './components/gallery/Gallery';
@@ -11,8 +12,14 @@ import Guarantee from './components/guarantee/Guarantee';
 import FAQCTA from './components/faqcta/FAQCTA';
 import Footer from './components/footer/Footer';
 import PurchaseNotification from './components/purchasenotification/PurchaseNotification';
+import { getUTMParams } from './utils/utm';
 
 function App() {
+  // Captura UTMs da URL no carregamento inicial e salva no localStorage
+  useEffect(() => {
+    getUTMParams();
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Hero />
