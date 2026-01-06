@@ -1,19 +1,11 @@
 import { useRef, memo } from 'react';
 import { Check } from 'lucide-react';
-import { trackAndRedirect } from '../../services/clickTracking';
 
 function Offer() {
   const offerRef = useRef<HTMLDivElement>(null);
 
-  const handlePurchase = () => {
-    trackAndRedirect(
-      'https://pay.hotmart.com/J103510772G?checkoutMode=10',
-      'offer-section',
-      false
-    );
-  };
-
   return (
+
     <section id="offer-section" ref={offerRef} className="py-20 bg-[#1e3a5f]">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto">
@@ -111,11 +103,11 @@ function Offer() {
 
             <a
               href="https://pay.hotmart.com/J103510772G?checkoutMode=10"
-              onClick={handlePurchase}
               className="checkout w-full bg-[#28a745] hover:bg-[#218838] text-white px-6 py-4 md:px-8 md:py-4 rounded-lg text-base md:text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 mb-4 text-center leading-tight"
             >
               QUERO MINHA APOSTILA AGORA!
             </a>
+
 
             <div className="mb-6">
               <div className="bg-amber-50 border-2 border-amber-400 rounded-xl p-4">

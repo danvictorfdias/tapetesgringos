@@ -1,14 +1,4 @@
-import { trackAndRedirect } from '../../services/clickTracking';
-
 export default function FAQCTA() {
-  const handlePurchase = () => {
-    trackAndRedirect(
-      'https://pay.hotmart.com/J103510772G?checkoutMode=10',
-      'faq-cta',
-      false
-    );
-  };
-
   return (
     <section className="py-16 bg-[#1e3a5f]">
       <div className="container mx-auto px-4">
@@ -23,7 +13,6 @@ export default function FAQCTA() {
 
           <a
             href="https://pay.hotmart.com/J103510772G?checkoutMode=10"
-            onClick={handlePurchase}
             className="checkout bg-[#28a745] hover:bg-[#218838] text-white px-12 py-5 rounded-lg text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
           >
             💳 Comprar Agora
